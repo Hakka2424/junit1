@@ -1,0 +1,45 @@
+<!-- Sample Ant build file for Circles -->
+
+<project name="circles" default="compile">
+    <!-- Property to find JUnit jar file -->
+    <property name="junitjar" location="C:\Users\tyrek\Computer Science\CS371\lab2\junit-platform-console-standalone-1.10.2.jar"/>
+    <!-- Output directory for compiled classes -->
+    <property name="build.dir" location="build"/>
+    <!-- Source directory, set to current directory as source files are not in a separate src folder -->
+    <property name="src.dir" location="."/>
+
+    <!-- Initializes the project, creates the build directory -->
+    <target name="init">
+        <mkdir dir="${build.dir}"/>
+    </target>
+
+    <!-- Compiles the Java source files -->
+    <target name="compile" description="compile the source" depends="init">
+        <javac srcdir="${src.dir}" destdir="${build.dir}" includeantruntime="false" debug="true" classpath="${junitjar}"/>
+    </target>
+
+    <!-- Runs the CircleRun class -->
+    <target name="run" description="run CircleRun" depends="compile">
+        <echo message="Run some circles! args: 1 2 4 4 5 4"/>
+        <java classname="CircleRun" fork="true" classpath="${build.dir}">
+            <arg value="1"/>
+            <arg value="2"/>
+            <arg value="4"/>
+            <arg value="4"/>
+            <arg value="5"/>
+            <arg value="4"/>
+        </java>
+    </target>
+
+    <!-- Runs JUnit tests -->
+    <target name="junit" description="run JUnit tests" depends="compile">
+        <java jar="${junitjar}" fork="true">
+            <arg line="--classpath=${build.dir} -c Circle1Test"/>
+        </java>
+    </target>
+
+    <!-- Cleans up by removing the build directory -->
+    <target name="clean">
+        <delete dir="${build.dir}"/>
+    </target>
+</project>
