@@ -3,9 +3,20 @@
  * an intersects() method is implemented here. Subclass must implement
  * the intersects() method.
  */
+
+/**
+ * Represents a circle with a center point and radius.
+ */
 public abstract class Circle {
-   protected CirclePoint center;
-   protected double radius;
+    /**
+     * The center point of the circle.
+     */
+    protected CirclePoint center;
+
+    /**
+     * The radius of the circle.
+     */
+    protected double radius;
 
    /**
     * Create new circle
@@ -52,13 +63,27 @@ public abstract class Circle {
 }
 
 /**
-* Simple class to represent a point in 2D space.
-*/
+ * Simple class to represent a point in 2D space.
+ */
 class CirclePoint {
-   double x, y;
+    /**
+     * The x-coordinate of this point in 2D space.
+     */
+    double x;
 
-   public CirclePoint(double x, double y) {
-       this.x = x;
-       this.y = y;
-   }
+    /**
+     * The y-coordinate of this point in 2D space.
+     */
+    double y;
+
+    /**
+     * Constructs a new point with specified x and y coordinates.
+     *
+     * @param x The x-coordinate of the new point.
+     * @param y The y-coordinate of the new point.
+     */
+    public CirclePoint(double x, double y) {
+        this.x = x;
+        this.y = y;
+    }
 }
