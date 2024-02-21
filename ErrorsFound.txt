@@ -1,46 +1,45 @@
 Issues Encountered and Solutions
 
 Choosing the Right Computer for Lab:
-
 Issue: Deciding between using a familiar Linux laptop and a Windows PC at home.
 Solution: Opted for the Windows PC due to mobility restrictions following a car accident, facilitating work from home.
-Downloading and Setting Up Required Software:
 
+Downloading and Setting Up Required Software:
 Issue: Challenges in downloading, organizing necessary lab files, and unfamiliarity with JUnit setup.
 Solution: Sought guidance from TA, Robert, who provided insight on JUnit, helped modify the PATH, and resolved environment variable issues for a smoother setup.
-JUnit Jar Location in build.xml:
 
+JUnit Jar Location in build.xml:
 Issue: Compiling issues due to incorrect location of junit.jar in the build.xml file.
 Solution: Navigated the file explorer to locate the junit.jar file, then copied and pasted the correct path into the build.xml file, ensuring the build file was organized and comments were added for clarity.
-Understanding and Starting with the Given Code:
 
+Understanding and Starting with the Given Code:
 Issue: Initial uncertainty on how to approach fixing the provided code, understanding its purpose, and effectively testing and debugging it.
 Solution: Engaged in multiple testing and debugging sessions to build understanding and progressively address the code's functionality and intent.
-Creating JavaDoc on Windows OS:
 
+Creating JavaDoc on Windows OS:
 Issue: Lacked knowledge on how to generate JavaDoc documentation.
 Solution: Consulted with the professor for step-by-step guidance on generating JavaDoc through the Windows CMD prompt.
-Correcting File Path Misplacements:
 
+Correcting File Path Misplacements:
 Issue: Installed some files into incorrect paths, causing environment variables to point to the wrong locations.
 Solution: With the professor's assistance, corrected the directory path and adjusted the two erroneous environment variables to accurately reflect the intended setup.
-Javadoc Generation Errors and Warnings:
 
+Javadoc Generation Errors and Warnings:
 Issue: Faced several warnings from Javadoc generation due to undocumented classes, methods, fields, and missing comments on default constructors.
 Solution: Enhanced documentation by adding comprehensive Javadoc comments to all relevant public classes, methods, and fields, including explicitly defining default constructors where needed.
-Compilation Errors from Incorrect Class Definitions:
 
+Compilation Errors from Incorrect Class Definitions:
 Issue: Erroneously defined a constructor for one class within another, causing compilation errors.
 Solution: Revised class definitions to ensure constructors and methods were correctly named and placed within their appropriate classes.
-Misuse of Constructors and Method Overrides:
 
+Misuse of Constructors and Method Overrides:
 Issue: Misapplication of constructors and incorrect method overrides across classes.
 Solution: Clarified and corrected the implementation of constructors and method overrides to adhere to Java conventions and accurately reflect the intended functionalities.
-Environment Setup and Tool Familiarization:
 
+Environment Setup and Tool Familiarization:
 Issue: Encountered difficulties in setting up the development environment and learning new tools like JUnit.
 Solution: Utilized TA support for environment configuration and independently researched to gain a proficient understanding and use of JUnit effectively.
-Code Assessment and Debugging Strategy:
 
+Code Assessment and Debugging Strategy:
 Issue: Determining an effective starting point for debugging and fully comprehending the provided codebase.
 Solution: Adopted a methodical approach by dissecting the code's functionality, employing targeted testing, and engaging in iterative debugging to identify and rectify issues.
