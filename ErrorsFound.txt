@@ -1,4 +1,4 @@
-Issues Encountered and Solutions
+-Issues Encountered and Solutions-
 
 Choosing the Right Computer for Lab:
 Issue: Deciding between using a familiar Linux laptop and a Windows PC at home.
@@ -43,3 +43,150 @@ Solution: Utilized TA support for environment configuration and independently re
 Code Assessment and Debugging Strategy:
 Issue: Determining an effective starting point for debugging and fully comprehending the provided codebase.
 Solution: Adopted a methodical approach by dissecting the code's functionality, employing targeted testing, and engaging in iterative debugging to identify and rectify issues.
+
+File: Circle.java
+
+Changes:
+Added a descriptive comment above the class definition.
+Renamed the Point class to CirclePoint.
+Moved the CirclePoint class definition to the bottom of the file.
+Updated the constructor to use the CirclePoint class for the center point.
+Added a check in the scale() method to return without scaling if the factor is negative.
+
+Reasons for Changes:
+Adding a descriptive comment enhances code readability and provides context for the Circle class.
+Renaming the Point class to CirclePoint provides more clarity and specificity regarding its usage.
+Moving the CirclePoint class definition to the bottom of the file follows common Java conventions, where nested classes are typically defined after the main class.
+Updating the Circle constructor to use CirclePoint enhances readability and encapsulation.
+Adding a check in the scale() method ensures that the radius is not modified if the scaling factor is negative, preventing unintended behavior.
+
+File: Circle1.java
+
+Changes:
+Added a descriptive comment above the class definition.
+Updated the constructor documentation to provide clear descriptions of parameters.
+Implemented the intersects() method to accurately determine circle intersections based on distances.
+
+Reasons for Changes:
+Adding a descriptive comment enhances code readability and provides context for the Circle1 class.
+Updating the constructor documentation improves code documentation and clarity for users of the class.
+Implementing the intersects() method with a correct geometric calculation ensures accurate determination of circle intersections, enhancing the functionality of the Circle1 class.
+
+File: Circle1Test.java
+
+Changes:
+Updated the class comment to provide a clearer description.
+Removed unnecessary constructor and added comments for clarity.
+Updated the setup() method to initialize Circle1 instance with specific parameters.
+Changed the type of p variable in test methods to CirclePoint.
+Updated assertions to use assertEquals() for floating-point comparisons.
+Added new test methods for scaling and circle intersections.
+
+Reasons for Changes:
+Adding a descriptive comment enhances code readability and provides context for the purpose of the test class.
+Removing the unnecessary constructor simplifies the code and adheres to best practices.
+Initializing the Circle1 instance with specific parameters in the setup() method ensures consistent testing conditions for each test case.
+Changing the type of the p variable to CirclePoint ensures type consistency and clarity in test method declarations.
+Using assertEquals() with a delta parameter for floating-point comparisons reduces the likelihood of false-negative test results due to rounding errors.
+Adding new test methods for scaling and intersection functionality ensures comprehensive test coverage for the Circle1 class.
+
+Tests Created:
+New test methods added for scaling and circle intersection functionality.
+
+simpleMove():
+
+-Purpose: 
+Tests the functionality of moving a circle positively along both the x and y axes.
+-Test Steps:
+Initializes a Circle1 instance with predefined parameters (x=1, y=2, radius=3) before each test method.
+Moves the circle by adding 1 to both x and y coordinates.
+Compares the resulting coordinates with the expected values (x=2, y=3).
+-Assertion: 
+Uses assertEquals() to verify that the new coordinates match the expected values.
+
+simpleMoveNeg():
+
+-Purpose: 
+Tests the functionality of moving a circle negatively along both the x and y axes.
+-Test Steps:
+Initializes a Circle1 instance with predefined parameters (x=1, y=2, radius=3) before each test method.
+Moves the circle by subtracting 1 from both x and y coordinates.
+Compares the resulting coordinates with the expected values (x=0, y=1).
+-Assertion: 
+Uses assertEquals() to verify that the new coordinates match the expected values.
+
+scalePositive():
+
+-Purpose: 
+Tests scaling the circle positively by doubling its radius.
+-Test Steps:
+Initializes a Circle1 instance with predefined parameters (x=1, y=2, radius=3) before each test method.
+Scales the circle by a factor of 2.0.
+-Assertion: 
+Uses assertEquals() to verify that the new radius is double the original radius (6).
+
+scaleNegative():
+
+-Purpose: 
+Tests scaling the circle with a negative factor, which should not change the radius.
+-Test Steps:
+Initializes a Circle1 instance with predefined parameters (x=1, y=2, radius=3) before each test method.
+Attempts to scale the circle by a factor of -1.0.
+-Assertion: 
+Uses assertEquals() to verify that the radius remains unchanged after scaling negatively.
+
+intersectingCircles():
+
+-Purpose: 
+Tests the intersection of two circles that do intersect.
+-Test Steps:
+Initializes a Circle1 instance with predefined parameters (x=1, y=2, radius=3) before each test method.
+Creates another Circle1 instance with parameters (x=3, y=3, radius=2), ensuring that the circles intersect.
+-Assertion: 
+Uses assertTrue() to verify that the intersects() method correctly identifies the circles as intersecting.
+
+nonIntersectingCircles():
+
+-Purpose: 
+Tests the intersection of two circles that do not intersect.
+-Test Steps:
+Initializes a Circle1 instance with predefined parameters (x=1, y=2, radius=3) before each test method.
+Creates another Circle1 instance with parameters (x=10, y=10, radius=1), ensuring that the circles do not intersect.
+-Assertion: 
+Uses assertFalse() to verify that the intersects() method correctly identifies the circles as not intersecting.
+
+File: Circle2.java
+
+Changes:
+Added a descriptive comment above the class definition.
+Updated the constructor documentation to provide clear descriptions of parameters.
+Implemented the intersects() method to accurately determine circle intersections based on distances.
+
+Reasons for Changes:
+Adding a descriptive comment enhances code readability and provides context for the Circle2 class.
+Updating the constructor documentation improves code documentation and clarity for users of the class.
+Implementing the intersects() method with a correct geometric calculation ensures accurate determination of circle intersections, enhancing the functionality of the Circle2 class.
+
+File: CircleRun.java
+
+Changes:
+Added a descriptive comment above the class definition.
+Modified the main() method to parse command line arguments correctly and create Circle1 and Circle2 objects accordingly.
+Improved error handling by catching NumberFormatException for invalid argument parsing and providing more informative error messages.
+
+Reasons for Changes:
+Adding a descriptive comment enhances code readability and provides context for the CircleRun class.
+Modifying the main() method ensures correct parsing of command line arguments and proper creation of Circle1 and Circle2 objects.
+Improving error handling enhances the robustness of the program by providing informative error messages.
+
+File: Point.java
+
+Changes:
+Added a descriptive comment above the class definition.
+Added comments above the x and y member variables to describe their purpose.
+Added a constructor to initialize a point at the origin (0, 0).
+
+Reasons for Changes:
+Adding a descriptive comment enhances code readability and provides context for the Point class.
+Adding comments above member variables improves code documentation and clarity for users of the class.
+Adding a constructor to initialize a point at the origin provides a convenient way to create points with default values.
