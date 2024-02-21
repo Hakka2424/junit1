@@ -33,10 +33,6 @@ ant compile
 ```bash
 ant junit
 ```
-or
-```bash
-ant compile
-```
 
 4. **Demostraction Application**
 - To run the 'CircleRun' application and see a demostraction of circle interesections, based on the provided parameters
